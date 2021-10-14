@@ -3,7 +3,9 @@
 ## Domain Proyek
 Domain yang dipilih untuk proyek *machine learning* ini adalah **Pendidikan**, dengan judul **Analisis Prediktif : Klasifikasi Gambar Bunga**
 - Latar Belakang
+
 ![Mengenali bunga](https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/022018/family-banner23.jpg?itok=HFo_J3pm)
+
 Anak-anak biasanya memiliki rasa ingin tahu yang tinggi. Untuk itu pendidikan pada anak dirancang dengan semenarik mungkin dan menyenangkan bagi anak. Salah satu cara yang bisa dilakukan adalah dengan menggunakan teknologi sebagai penunjang pembelajaran. Penggunaan teknologi dalam menyelesaikan tugas pada siswa, juga dapat menimbulkan kreativitas dikalangan siswa dalam mengembangkan pengetahuan yang telah mereka miliki [[5](https://doi.org/10.31599/jki.v1i1.265)].
 Untuk itu dalam proyek ini saya mengangkat judul **Analisis Prediktif : Klasifikasi Gambar Bunga** yang diharapkan nantinya dapat diimplementasikan menjadi sebuah aplikasi yang menarik bagi anak-anak untuk belajar mengenali jenis-jenis bunga di sekitar mereka.
 
@@ -53,28 +55,46 @@ Teknik yang digunakan dalam penyiapan data *(Data Preparation)* yaitu:
 ## Modeling
 Pada tahap modeling ini dibuat beberapa model dengan arsitektur jaringan saraf tiruan yang berbeda-beda. Pada proyek ini akan dibuat 4 model, diantaranya yaitu menggunakan CNN, VGG16, ResNet50, dan DenseNet201.
 Setelah melatih keempat model tersebut, didapatkan metriks akurasi sebagai berikut seperti pada diagram di bawah ini.
+
 ![model validation accuracy](https://picc.io/gyVzuKV.png)
+
 Dari hasil tersebut dapat diketahui bahwa model dengan DenseNet201 memiliki kinerja yang lebih baik. Untuk itu model tersebut yang akan dipilih untuk digunakan.
 
 ## Evaluation
 Pada proyek ini, model yang dibuat merupakan kasus klasifikasi dan menggunakan metriks akurasi dan loss.
 
 - **Akurasi**
+
 Akurasi merupakan kalkulasi presentase jumlah ketepatan prediksi dari jumlah seluruh data yang diprediksi. Nilai akurasi dapat dihitung dengan rumus berikut.
+
 ![accuracy](https://picc.io/TjmnuqU.png)
+
 Berikut ini adalah diagram metriks akurasi yang didapatkan setelah melatih model DenseNet201.
+
 ![DenseNet201 model accuracy](https://picc.io/NAQEqsN.png)
+
 - ***Loss***
+
 *Loss* adalah nilai yang dihasilkan dari *loss function*.  *Function* tersebut memiliki dua properti penting, semakin sedikit nilainya maka semakin baik model sesuai dengan data dan itu harus terdiferensiasi [[4](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)]. *Loss function* yang digunakan pada proyek ini adalah [categorical_crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy) yang mana perhitungannya digambarkan pada rumus berikut ini.
+
 ![categorical_crossentropy loss function](https://picc.io/UdCHKng.png)
+
 Nilai ini adalah ukuran yang sangat baik tentang bagaimana dua distribusi probabilitas diskrit dapat dibedakan satu sama lain. Dalam konteks ini, *yi* adalah peluang terjadinya peristiwa *ii* dan jumlah semua *yi* adalah 1, artinya tepat satu peristiwa dapat terjadi. Tanda minus memastikan bahwa kerugian semakin kecil ketika distribusi semakin dekat satu sama lain.
 Berikut ini adalah diagram loss yang didapatkan setelah melatih model DenseNet201.
+
 ![DenseNet201 model loss](https://picc.io/vny8TTX.png)
+
 ## Referensi
 [[1](https://viso.ai/deep-learning/resnet-residual-neural-network/)] Boesch, G. (2021). *Deep Residual Networks (ResNet, ResNet50) – Guide in 2021*. viso.ai . https://viso.ai/deep-learning/resnet-residual-neural-network/
+
 [[2](https://arxiv.org/abs/1608.06993)] Huang, G., Liu, Z., Van Der Maaten, L., & Weinberger, K. Q. (2017). Densely connected convolutional networks. *In Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 4700-4708). https://arxiv.org/abs/1608.06993
+
 [[3](https://medium.com/@nutanbhogendrasharma/deep-convolutional-networks-vgg16-for-image-recognition-in-keras-a4beb59f80a7)] Nutan. (2020). *Deep Convolutional Networks VGG16 for Image Recognition in Keras*. Medium. https://medium.com/@nutanbhogendrasharma/deep-convolutional-networks-vgg16-for-image-recognition-in-keras-a4beb59f80a7
+
 [[4](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)] Setiaji, A. (2018). *Deep Learning : Loss Function, Metric*. GitHub. https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html
+
 [[5](https://doi.org/10.31599/jki.v1i1.265)] Siahaan, M. (2020). "Dampak Pandemi Covid-19 Terhadap Dunia Pendidikan". *Jurnal Kajian Ilmiah, 1(1)*. https://doi.org/10.31599/jki.v1i1.265
+
 [[6](https://medium.com/analytics-vidhya/image-augmentation-9b7be3972e27)] Tanwar, S. (2021). *Image Augmentation - Improving Deep learning models*. Medium. https://medium.com/analytics-vidhya/image-augmentation-9b7be3972e27
+
 [[7](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network)] Wood, T. - . *Convolutional Neural Network*. DeepAI. https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network
