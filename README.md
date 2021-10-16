@@ -1,13 +1,13 @@
-# Laporan Proyek Machine Learning - Yusuf Sugiono
+# Laporan Proyek Machine Learning - Klasifikasi Gambar Bunga
 
 ## Domain Proyek
-Domain yang dipilih untuk proyek *machine learning* ini adalah **Pendidikan**, dengan judul **Analisis Prediktif : Klasifikasi Gambar Bunga**
+Domain yang dipilih untuk proyek *machine learning* ini adalah **Pendidikan**, dengan judul **Klasifikasi Gambar Bunga**
 - Latar Belakang
 
 ![Mengenali bunga](https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/022018/family-banner23.jpg?itok=HFo_J3pm)
 
 Anak-anak biasanya memiliki rasa ingin tahu yang tinggi. Untuk itu pendidikan pada anak dirancang dengan semenarik mungkin dan menyenangkan bagi anak. Salah satu cara yang bisa dilakukan adalah dengan menggunakan teknologi sebagai penunjang pembelajaran. Penggunaan teknologi dalam menyelesaikan tugas pada siswa, juga dapat menimbulkan kreativitas dikalangan siswa dalam mengembangkan pengetahuan yang telah mereka miliki [[5](https://doi.org/10.31599/jki.v1i1.265)].
-Untuk itu dalam proyek ini saya mengangkat judul **Analisis Prediktif : Klasifikasi Gambar Bunga** yang diharapkan nantinya dapat diimplementasikan menjadi sebuah aplikasi yang menarik bagi anak-anak untuk belajar mengenali jenis-jenis bunga di sekitar mereka.
+Untuk itu dalam proyek ini saya mengangkat judul **Klasifikasi Gambar Bunga** yang diharapkan nantinya dapat diimplementasikan menjadi sebuah aplikasi yang menarik bagi anak-anak untuk belajar mengenali jenis-jenis bunga di sekitar mereka.
 
 ## Business Understanding
 
