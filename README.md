@@ -32,7 +32,7 @@ Untuk mencapai tujuan tersebut, dalam proyek ini akan dibuat beberapa model yang
 ## Data Understanding
 Dataset yang digunakan dalam proyek ini adalah data kumpulan gambar bunga. Data ini dapat diunduh melalui Kaggle. Dataset ini berisi 4000 lebih gambar yang terbagi menjadi 5 jenis bunga, yaitu : `daisy`, `tulip`, `sunflower`, `dandelion`, dan `rose`
 
-![Flowers Recognition Dataset](https://picc.io/ht0pKz5.png)
+![Flowers Recognition Dataset](https://i.postimg.cc/1RbGNmqp/Screenshot-17.png)
 
 Informasi Dataset:
 
@@ -56,7 +56,7 @@ Teknik yang digunakan dalam penyiapan data *(Data Preparation)* yaitu:
 Pada tahap modeling ini dibuat beberapa model dengan arsitektur jaringan saraf tiruan yang berbeda-beda. Pada proyek ini akan dibuat 4 model, diantaranya yaitu menggunakan CNN, VGG16, ResNet50, dan DenseNet201.
 Setelah melatih keempat model tersebut, didapatkan metriks akurasi sebagai berikut seperti pada diagram di bawah ini.
 
-![model validation accuracy](https://picc.io/gyVzuKV.png)
+![model validation accuracy](https://i.postimg.cc/ydJ1FPz8/Screenshot-6.png)
 
 Dari hasil tersebut dapat diketahui bahwa model dengan DenseNet201 memiliki kinerja yang lebih baik. Untuk itu model tersebut yang akan dipilih untuk digunakan.
 
@@ -67,22 +67,22 @@ Pada proyek ini, model yang dibuat merupakan kasus klasifikasi dan menggunakan m
 
 Akurasi merupakan kalkulasi presentase jumlah ketepatan prediksi dari jumlah seluruh data yang diprediksi. Nilai akurasi dapat dihitung dengan rumus berikut.
 
-![accuracy](https://picc.io/TjmnuqU.png)
+![accuracy](https://i.postimg.cc/TwSPSscb/Screenshot-15.png)
 
 Berikut ini adalah diagram metriks akurasi yang didapatkan setelah melatih model DenseNet201.
 
-![DenseNet201 model accuracy](https://picc.io/NAQEqsN.png)
+![DenseNet201 model accuracy](https://i.postimg.cc/PrDHfJd0/Screenshot-4.png)
 
 - ***Loss***
 
 *Loss* adalah nilai yang dihasilkan dari *loss function*.  *Function* tersebut memiliki dua properti penting, semakin sedikit nilainya maka semakin baik model sesuai dengan data dan itu harus terdiferensiasi [[4](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)]. *Loss function* yang digunakan pada proyek ini adalah [categorical_crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy) yang mana perhitungannya digambarkan pada rumus berikut ini.
 
-![categorical_crossentropy loss function](https://picc.io/UdCHKng.png)
+![categorical_crossentropy loss function](https://i.postimg.cc/jjSk2xpz/Screenshot-16.png)
 
 Nilai ini adalah ukuran yang sangat baik tentang bagaimana dua distribusi probabilitas diskrit dapat dibedakan satu sama lain. Dalam konteks ini, *yi* adalah peluang terjadinya peristiwa *ii* dan jumlah semua *yi* adalah 1, artinya tepat satu peristiwa dapat terjadi. Tanda minus memastikan bahwa kerugian semakin kecil ketika distribusi semakin dekat satu sama lain.
 Berikut ini adalah diagram loss yang didapatkan setelah melatih model DenseNet201.
 
-![DenseNet201 model loss](https://picc.io/vny8TTX.png)
+![DenseNet201 model loss](https://i.postimg.cc/6TJD4VBg/Screenshot-5.png)
 
 ## Referensi
 [[1](https://viso.ai/deep-learning/resnet-residual-neural-network/)] Boesch, G. (2021). *Deep Residual Networks (ResNet, ResNet50) – Guide in 2021*. viso.ai . https://viso.ai/deep-learning/resnet-residual-neural-network/
