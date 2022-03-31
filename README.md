@@ -6,7 +6,7 @@ Domain yang dipilih untuk proyek *machine learning* ini adalah **Pendidikan**, d
 
 ![Mengenali bunga](https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/022018/family-banner23.jpg?itok=HFo_J3pm)
 
-Anak-anak biasanya memiliki rasa ingin tahu yang tinggi. Untuk itu pendidikan pada anak dirancang dengan semenarik mungkin dan menyenangkan bagi anak. Salah satu cara yang bisa dilakukan adalah dengan menggunakan teknologi sebagai penunjang pembelajaran. Penggunaan teknologi dalam menyelesaikan tugas pada siswa, juga dapat menimbulkan kreativitas dikalangan siswa dalam mengembangkan pengetahuan yang telah mereka miliki [[5](https://doi.org/10.31599/jki.v1i1.265)].
+Anak-anak biasanya memiliki rasa ingin tahu yang tinggi. Untuk itu pendidikan pada anak dirancang dengan semenarik mungkin dan menyenangkan bagi anak. Salah satu cara yang bisa dilakukan adalah dengan menggunakan teknologi sebagai penunjang pembelajaran. Penggunaan teknologi dalam menyelesaikan tugas pada siswa, juga dapat menimbulkan kreativitas dikalangan siswa dalam mengembangkan pengetahuan yang telah mereka miliki [[1](https://doi.org/10.31599/jki.v1i1.265)].
 Untuk itu dalam proyek ini saya mengangkat judul **Klasifikasi Gambar Bunga** yang diharapkan nantinya dapat diimplementasikan menjadi sebuah aplikasi yang menarik bagi anak-anak untuk belajar mengenali jenis-jenis bunga di sekitar mereka.
 
 ## Business Understanding
@@ -23,11 +23,11 @@ Tujuan dari proyek ini adalah:
 
 ### Solution statements
 Untuk mencapai tujuan tersebut, dalam proyek ini akan dibuat beberapa model yang berbeda untuk dibandingkan, diantaranya adalah menggunakan:
-- **Convolutional Neural Network**. CNN merupakan jaringan saraf *deep learning* yang dirancang untuk memproses susunan data terstruktur seperti gambar [[7](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network)]. Jaringan saraf *convolutional* banyak digunakan dalam *computer vision* dan telah menjadi seni untuk banyak aplikasi visual seperti klasifikasi gambar, dan juga telah menemukan keberhasilan dalam pemrosesan bahasa alami untuk klasifikasi teks.
+- **Convolutional Neural Network**. CNN merupakan jaringan saraf *deep learning* yang dirancang untuk memproses susunan data terstruktur seperti gambar [[2](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network)]. Jaringan saraf *convolutional* banyak digunakan dalam *computer vision* dan telah menjadi seni untuk banyak aplikasi visual seperti klasifikasi gambar, dan juga telah menemukan keberhasilan dalam pemrosesan bahasa alami untuk klasifikasi teks.
 - **VGG16**. VGG16 (juga disebut *OxfordNet*) adalah arsitektur jaringan saraf *convolutional* yang dinamai oleh *Visual Geometry Group* dari Oxford, yang mengembangkannya. Arsitektur ini digunakan untuk memenangkan kompetisi ILSVRC2014 *(Large Scale Visual Recognition Challenge 2014)* pada tahun 2014 dan masih dianggap sebagai model yang sangat baik untuk *computer vision* [[3](https://medium.com/@nutanbhogendrasharma/deep-convolutional-networks-vgg16-for-image-recognition-in-keras-a4beb59f80a7)].
-- **ResNet50**. Jaringan residual atau *Residual Network (ResNet)* adalah jaringan saraf tiruan dari jenis yang menumpuk blok residual di atas satu sama lain untuk membentuk jaringan [[1](https://viso.ai/deep-learning/resnet-residual-neural-network/)].
+- **ResNet50**. Jaringan residual atau *Residual Network (ResNet)* adalah jaringan saraf tiruan dari jenis yang menumpuk blok residual di atas satu sama lain untuk membentuk jaringan [[4](https://viso.ai/deep-learning/resnet-residual-neural-network/)].
 
-- **DenseNet201**. Jaringan ini menghubungkan setiap lapisan ke setiap lapisan lainnya secara *feed-forward*. DenseNets memiliki beberapa keuntungan yang menarik: jaringan ini meringankan masalah *vanishing-gradient*, memperkuat *feature propagation*, mendorong penggunaan kembali fitur, dan secara substansial mengurangi jumlah parameter [[2](https://arxiv.org/abs/1608.06993)].
+- **DenseNet201**. Jaringan ini menghubungkan setiap lapisan ke setiap lapisan lainnya secara *feed-forward*. DenseNets memiliki beberapa keuntungan yang menarik: jaringan ini meringankan masalah *vanishing-gradient*, memperkuat *feature propagation*, mendorong penggunaan kembali fitur, dan secara substansial mengurangi jumlah parameter [[5](https://arxiv.org/abs/1608.06993)].
 
 ## Data Understanding
 Dataset yang digunakan dalam proyek ini adalah data kumpulan gambar bunga. Data ini dapat diunduh melalui Kaggle. Dataset ini berisi 4000 lebih gambar yang terbagi menjadi 5 jenis bunga, yaitu : `daisy`, `tulip`, `sunflower`, `dandelion`, dan `rose`
@@ -75,7 +75,7 @@ Berikut ini adalah diagram metriks akurasi yang didapatkan setelah melatih model
 
 - ***Loss***
 
-*Loss* adalah nilai yang dihasilkan dari *loss function*.  *Function* tersebut memiliki dua properti penting, semakin sedikit nilainya maka semakin baik model sesuai dengan data dan itu harus terdiferensiasi [[4](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)]. *Loss function* yang digunakan pada proyek ini adalah [categorical_crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy) yang mana perhitungannya digambarkan pada rumus berikut ini.
+*Loss* adalah nilai yang dihasilkan dari *loss function*.  *Function* tersebut memiliki dua properti penting, semakin sedikit nilainya maka semakin baik model sesuai dengan data dan itu harus terdiferensiasi [[7](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)]. *Loss function* yang digunakan pada proyek ini adalah [categorical_crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy) yang mana perhitungannya digambarkan pada rumus berikut ini.
 
 ![categorical_crossentropy loss function](https://i.postimg.cc/jjSk2xpz/Screenshot-16.png)
 
@@ -85,16 +85,16 @@ Berikut ini adalah diagram loss yang didapatkan setelah melatih model DenseNet20
 ![DenseNet201 model loss](https://i.postimg.cc/6TJD4VBg/Screenshot-5.png)
 
 ## Referensi
-[[1](https://viso.ai/deep-learning/resnet-residual-neural-network/)] Boesch, G. (2021). *Deep Residual Networks (ResNet, ResNet50) – Guide in 2021*. viso.ai . https://viso.ai/deep-learning/resnet-residual-neural-network/
+[[1](https://doi.org/10.31599/jki.v1i1.265)] Siahaan, M. (2020). "Dampak Pandemi Covid-19 Terhadap Dunia Pendidikan". *Jurnal Kajian Ilmiah, 1(1)*. https://doi.org/10.31599/jki.v1i1.265
 
-[[2](https://arxiv.org/abs/1608.06993)] Huang, G., Liu, Z., Van Der Maaten, L., & Weinberger, K. Q. (2017). Densely connected convolutional networks. *In Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 4700-4708). https://arxiv.org/abs/1608.06993
+[[2](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network)] Wood, T. - . *Convolutional Neural Network*. DeepAI. https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network
 
 [[3](https://medium.com/@nutanbhogendrasharma/deep-convolutional-networks-vgg16-for-image-recognition-in-keras-a4beb59f80a7)] Nutan. (2020). *Deep Convolutional Networks VGG16 for Image Recognition in Keras*. Medium. https://medium.com/@nutanbhogendrasharma/deep-convolutional-networks-vgg16-for-image-recognition-in-keras-a4beb59f80a7
 
-[[4](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)] Setiaji, A. (2018). *Deep Learning : Loss Function, Metric*. GitHub. https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html
+[[4](https://viso.ai/deep-learning/resnet-residual-neural-network/)] Boesch, G. (2021). *Deep Residual Networks (ResNet, ResNet50) – Guide in 2021*. viso.ai . https://viso.ai/deep-learning/resnet-residual-neural-network/
 
-[[5](https://doi.org/10.31599/jki.v1i1.265)] Siahaan, M. (2020). "Dampak Pandemi Covid-19 Terhadap Dunia Pendidikan". *Jurnal Kajian Ilmiah, 1(1)*. https://doi.org/10.31599/jki.v1i1.265
+[[5](https://arxiv.org/abs/1608.06993)] Huang, G., Liu, Z., Van Der Maaten, L., & Weinberger, K. Q. (2017). Densely connected convolutional networks. *In Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 4700-4708). https://arxiv.org/abs/1608.06993
 
 [[6](https://medium.com/analytics-vidhya/image-augmentation-9b7be3972e27)] Tanwar, S. (2021). *Image Augmentation - Improving Deep learning models*. Medium. https://medium.com/analytics-vidhya/image-augmentation-9b7be3972e27
 
-[[7](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network)] Wood, T. - . *Convolutional Neural Network*. DeepAI. https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network
+[[7](https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html)] Setiaji, A. (2018). *Deep Learning : Loss Function, Metric*. GitHub. https://mragungsetiaji.github.io/python/machine%20learning/2018/09/02/deeplearning-loss-function-metric.html
