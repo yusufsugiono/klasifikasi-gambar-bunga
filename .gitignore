@@ -1,0 +1,5 @@
+app/model.h5
+app/__pycache__
+app/venv
+app/static/*
+*.pyc
